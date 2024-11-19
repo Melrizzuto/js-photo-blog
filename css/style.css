@@ -47,9 +47,15 @@ main {
     padding: 20px;
     background-color: white;
     margin: 10px;
+    position: relative;
 }
 
 
+#pin {
+    position: absolute;
+    top: 0;
+    left: 45%;
+}
 
 
 /* media queries */
