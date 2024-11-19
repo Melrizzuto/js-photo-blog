@@ -38,6 +38,7 @@ header h1 {
 }
 
 .row {
+    min-width: 200px;
     flex-basis: calc(30% - 10px);
     flex-grow: 1;
     flex-shrink: 0;
