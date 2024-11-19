@@ -75,12 +75,19 @@ header h1 {
 @media screen and (max-width: 576px) {
     .container {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .row {
+        max-width: 400px;
     }
 }
 
 @media screen and (max-width: 900px) {
     .row {
         flex-basis: calc(50% - 20px);
+        max-width: 400px;
 
     }
 }
