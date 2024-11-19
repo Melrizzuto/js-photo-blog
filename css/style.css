@@ -25,6 +25,7 @@ header h1 {
     text-align: center;
     background-image: url("../img/wall.png");
     padding: 20px;
+    text-transform: uppercase;
 }
 
 main {
