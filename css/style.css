@@ -45,7 +45,6 @@ header h1 {
     text-align: center;
     padding: 20px;
     background-color: white;
-    margin: 10px;
     position: relative;
     cursor: pointer;
     box-shadow: 5px 13px 8px 1px rgba(0, 0, 0, 0.5);
@@ -54,7 +53,7 @@ header h1 {
 }
 
 .row:hover {
-    rotate: 10deg;
+    transform: rotate(10deg);
     box-shadow: 5px 13px 8px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -73,10 +72,13 @@ header h1 {
 
 
 @media screen and (max-width: 576px) {
-    .container {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    @media screen and (max-width: 576px) {
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     .row {
@@ -91,5 +93,3 @@ header h1 {
 
     }
 }
-
-@media screen and (max-width: 1200px) {}
