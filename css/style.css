@@ -16,13 +16,19 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 header h1 {
+    font-size: 6em;
     text-align: center;
-    margin: 20px;
+    background-image: url("../img/wall.png");
+    padding: 20px;
+}
+
+main {
+    background-image: url("../img/cork.png");
 }
 
 .d-flex {
@@ -36,4 +42,8 @@ header h1 {
     flex-shrink: 1;
     text-align: center;
     padding: 20px;
+    background-color: white;
+    margin: 10px;
 }
+
+.col {}
