@@ -10,3 +10,13 @@
 body {
     font-family: "Edu TAS Beginner", cursive;
 }
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header h1 {
+    text-align: center;
+    margin: 20px;
+}
