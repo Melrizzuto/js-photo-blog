@@ -15,6 +15,7 @@
 
 body {
     font-family: "Edu TAS Beginner", cursive;
+    background-image: url("../img/cork.png");
 }
 
 .container {
@@ -30,9 +31,6 @@ header h1 {
     text-transform: uppercase;
 }
 
-main {
-    background-image: url("../img/cork.png");
-}
 
 .d-flex {
     display: flex;
@@ -50,7 +48,8 @@ main {
     position: relative;
     cursor: pointer;
     box-shadow: 5px 13px 8px 1px rgba(0, 0, 0, 0.5);
-    margin-top: 30px;
+    margin: 40px 10px;
+    overflow: hidden;
 }
 
 .row:hover {
