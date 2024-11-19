@@ -23,7 +23,7 @@ body {
 }
 
 header h1 {
-    font-size: 6em;
+    font-size: 3em;
     text-align: center;
     background-image: url("../img/wall.png");
     padding: 20px;
@@ -40,7 +40,7 @@ main {
 }
 
 .row {
-    flex-basis: calc(30% - 20px);
+    flex-basis: calc(30% - 10px);
     flex-grow: 1;
     flex-shrink: 0;
     text-align: center;
@@ -48,8 +48,15 @@ main {
     background-color: white;
     margin: 10px;
     position: relative;
+    cursor: pointer;
+    box-shadow: 5px 13px 8px 1px rgba(0, 0, 0, 0.5);
+    margin-top: 30px;
 }
 
+.row:hover {
+    rotate: 10deg;
+    box-shadow: 5px 13px 8px 5px rgba(0, 0, 0, 0.5);
+}
 
 #pin {
     position: absolute;
@@ -77,3 +84,5 @@ main {
 
     }
 }
+
+@media screen and (max-width: 1200px) {}
