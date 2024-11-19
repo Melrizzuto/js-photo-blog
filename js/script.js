@@ -7,7 +7,7 @@ const params = { "_limit": 6 };
 // Chiamata Axios per ottenere 6 foto
 axios.get(baseUrl + resource, { params })
     .then((res) => {
-        // Ottiengo le foto dalla risposta
+        // Ottengo le foto dalla risposta
         const photos = res.data;
 
         // Seleziono il contenitore delle cards
