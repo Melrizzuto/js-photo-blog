@@ -1,41 +1,37 @@
-
-
-
 const baseUrl = "https://jsonplaceholder.typicode.com/";
 const resource = "photos";
 
-// const endPoint = baseUrl + resource;
-
-// mi servono però 6 photo, come faccio????? USO _LIMIT= NEI BACKTICKS (limit riguarda i database.)
-
-// oggetto params
+// Oggetto params per limitare il numero di foto
 const params = { "_limit": 6 };
 
-// chiamata
-axios.get(baseUrl + resource, { params }).then((res) => {
-    console.log(res.data);
-})
+// Chiamata Axios per ottenere 6 foto
+axios.get(baseUrl + resource, { params })
+    .then((res) => {
+        // Ottiengo le foto dalla risposta
+        const photos = res.data;
 
-// creo le cards da js
-let postcards = document.querySelector(".container");
-let numberOfCards = 5;
+        // Seleziono il contenitore delle cards
+        let postcards = document.querySelector(".container");
 
-for (let i = 0; i < numberOfCards; i++) {
-    // devo creare il template delle cards e inserire 6 figures dentro card
-    let card = document.createElement("div");
-    card.classList.add("row")
-    card.innerHTML += `
-     <div class="col">
-            <div id="pin">
-                <img src="./img/pin.svg" alt="">
-            </div>
-            <figure>
-                <img src="./img/wall.png" alt="Trulli" style="width:100%">
-        <figcaption>Fig.1 - Trulli, Puglia, Italy</figcaption>
-            </figure>
-            </div>
-        `;
-    postcards.appendChild(card);
+        // Creo una card per ogni foto
+        photos.forEach((photo) => {
+            let card = document.createElement("div");
+            card.classList.add("row");
 
-    console.log(card);
-}
+
+            card.innerHTML = `
+                <div class="col">
+                    <div id="pin">
+                        <img src="./img/pin.svg" alt="">
+                    </div>
+                    <figure>
+                        <img src="${photo.url}" alt="${photo.title}">
+                        <figcaption>${photo.title}</figcaption>
+                    </figure>
+                </div>
+            `;
+
+            postcards.appendChild(card);
+
+        });
+    });

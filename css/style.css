@@ -57,6 +57,10 @@ main {
     left: 45%;
 }
 
+.col img {
+    width: 100%;
+
+}
 
 /* media queries */
 
