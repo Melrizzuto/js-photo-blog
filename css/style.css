@@ -23,8 +23,8 @@ body {
     flex-wrap: wrap;
 }
 
-#overlay.d-none {
-    display: none;
+.d-none {
+    display: none !important;
 }
 
 /* text settings */
@@ -85,7 +85,7 @@ main {
     width: 100%;
 }
 
-/* Overlay settings */
+/* Images Overlay settings */
 #overlay {
     position: fixed;
     background-color: rgba(0, 0, 0, 0.50);
@@ -123,6 +123,26 @@ main {
     cursor: pointer;
     font-size: 16px;
     border-radius: 10px;
+}
+
+/* loader overlay settings */
+
+#loader {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.50);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.fa-solid {
+    font-size: 3rem;
+    color: darkgrey;
 }
 
 /* media queries */

@@ -10,6 +10,8 @@ axios.get(baseUrl + resource, { params })
         // Ottengo le foto dalla risposta
         const photos = res.data;
 
+        const loader = document.getElementById("#loader")
+
         // Seleziono il contenitore delle cards
         let postcards = document.querySelector(".container");
 
@@ -37,7 +39,13 @@ axios.get(baseUrl + resource, { params })
     })
     .catch((error) => {
         console.log(error);
-    });
+    }).finally(
+
+        setTimeout(() => {
+            loader.classList.add("d-none");
+        }, 1000)
+
+    )
 
 // Imposto l'overlay
 function getImg() {
