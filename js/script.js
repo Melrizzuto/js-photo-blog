@@ -1,5 +1,9 @@
 const baseUrl = "https://jsonplaceholder.typicode.com/";
 const resource = "photos";
+const closeBtn = document.querySelector("button");
+closeBtn.addEventListener("click", () => {
+    overlay.classList.add("d-none");
+})
 
 // Oggetto params per limitare il numero di foto
 const params = { "_limit": 6 };
@@ -24,9 +28,9 @@ axios.get(baseUrl + resource, { params })
                     <div id="pin">
                         <img src="./img/pin.svg" alt="">
                     </div>
-                    <figure>
+                    <figure id="${photo.id}">
                         <img src="${photo.url}" alt="${photo.title}">
-                        <figcaption>${photo.title}</figcaption>
+                        <figcaption>${photo.title.charAt(0).toUpperCase() + photo.title.slice(1).toLowerCase()}</figcaption>
                     </figure>
                 </div>
             `;
@@ -34,4 +38,6 @@ axios.get(baseUrl + resource, { params })
             postcards.appendChild(card);
 
         });
+    }).catch((error) => {
+        console.log(error);
     });

@@ -47,25 +47,44 @@ header h1 {
     background-color: white;
     position: relative;
     cursor: pointer;
-    box-shadow: 5px 13px 8px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 8px 5px rgba(0, 0, 0, 0.5);
     margin: 40px 10px;
-    overflow: hidden;
 }
 
 .row:hover {
     transform: rotate(10deg);
-    box-shadow: 5px 13px 8px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 10px 15px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.row:hover #pin {
+    display: none;
 }
 
 #pin {
     position: absolute;
-    top: 0;
+    top: -20px;
     left: 45%;
 }
 
 .col img {
     width: 100%;
 
+}
+
+#overlay.d-none {
+    display: none;
+}
+
+#overlay {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.50);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 /* media queries */
