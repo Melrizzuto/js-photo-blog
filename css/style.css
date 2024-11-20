@@ -70,6 +70,13 @@ header h1 {
 
 /* media queries */
 
+@media screen and (max-width: 900px) {
+    .row {
+        flex-basis: calc(50% - 20px);
+        max-width: 400px;
+
+    }
+}
 
 @media screen and (max-width: 576px) {
     @media screen and (max-width: 576px) {
@@ -83,13 +90,5 @@ header h1 {
 
     .row {
         max-width: 400px;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .row {
-        flex-basis: calc(50% - 20px);
-        max-width: 400px;
-
     }
 }
