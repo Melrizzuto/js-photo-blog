@@ -53,7 +53,7 @@ header h1 {
 
 .row:hover {
     transform: rotate(10deg);
-    box-shadow: 1px 1px 10px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 10px 10px 20px 20px rgba(0, 0, 0, 0.5);
     z-index: 10;
 }
 
