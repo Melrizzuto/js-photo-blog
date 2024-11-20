@@ -30,7 +30,7 @@ axios.get(baseUrl + resource, { params })
                     </div>
                     <figure id="${photo.id}">
                         <img src="${photo.url}" alt="${photo.title}">
-                        <figcaption>${photo.title.charAt(0).toUpperCase() + photo.title.slice(1).toLowerCase()}</figcaption>
+                        <figcaption class="capitalize">${photo.title}</figcaption>
                     </figure>
                 </div>
             `;
@@ -41,3 +41,5 @@ axios.get(baseUrl + resource, { params })
     }).catch((error) => {
         console.log(error);
     });
+
+
