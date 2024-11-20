@@ -7,22 +7,27 @@
     box-sizing: border-box;
 }
 
-.debug {
+/* .debug {
     border: 1px solid red;
-}
+} */
 
 /* settings body */
-
 body {
     font-family: "Edu TAS Beginner", cursive;
     background-image: url("../img/cork.png");
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+/* utilities flex */
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
 }
 
+#overlay.d-none {
+    display: none;
+}
+
+/* text settings */
 header h1 {
     font-size: 6em;
     text-align: center;
@@ -35,16 +40,17 @@ header h1 {
     text-transform: capitalize;
 }
 
-
-.d-flex {
-    display: flex;
-    flex-wrap: wrap;
+/* Main settings */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 main {
     padding: 50px;
 }
 
+/* Cards (row) settings */
 .row {
     min-width: 200px;
     flex-basis: calc(30% - 20px);
@@ -79,10 +85,7 @@ main {
     width: 100%;
 }
 
-#overlay.d-none {
-    display: none;
-}
-
+/* Overlay settings */
 #overlay {
     position: fixed;
     background-color: rgba(0, 0, 0, 0.50);
@@ -98,8 +101,9 @@ main {
 
 #overlay-content {
     text-align: center;
-    position: relative;
+    display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 #img-overlay {
@@ -109,16 +113,16 @@ main {
 }
 
 #close-overlay {
-    position: absolute;
-    top: 0px;
-    right: 0px;
+    margin-bottom: 50px;
+    width: 80px;
+    height: 40px;
     background-color: red;
     color: white;
     padding: 10px;
     border: none;
     cursor: pointer;
     font-size: 16px;
-    border-radius: 10%;
+    border-radius: 10px;
 }
 
 /* media queries */

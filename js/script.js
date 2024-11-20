@@ -1,9 +1,5 @@
 const baseUrl = "https://jsonplaceholder.typicode.com/";
 const resource = "photos";
-const closeBtn = document.querySelector("button");
-closeBtn.addEventListener("click", () => {
-    overlay.classList.add("d-none");
-})
 
 // Oggetto params per limitare il numero di foto
 const params = { "_limit": 6 };
@@ -22,13 +18,12 @@ axios.get(baseUrl + resource, { params })
             let card = document.createElement("div");
             card.classList.add("row");
 
-
             card.innerHTML = `
                 <div class="col">
                     <div id="pin">
-                        <img src="./img/pin.svg" alt="">
+                        <img src="./img/pin.svg" alt="Pin Icon">
                     </div>
-                    <figure id="${photo.id}">
+                    <figure id="photo-${photo.id}">
                         <img src="${photo.url}" alt="${photo.title}">
                         <figcaption class="capitalize">${photo.title}</figcaption>
                     </figure>
@@ -36,11 +31,38 @@ axios.get(baseUrl + resource, { params })
             `;
 
             postcards.appendChild(card);
-
         });
-    }).catch((error) => {
+
+        getImg();
+    })
+    .catch((error) => {
         console.log(error);
     });
 
-// impostare l'overlay
+// Imposto l'overlay
+function getImg() {
+    const images = document.querySelectorAll("figure"); //lo seleziono dinamicamente dal template.
+
+    // Selezioni dal DOM 
+    const overlay = document.getElementById("overlay");
+    const overlayImg = document.getElementById("img-overlay");
+    const closeBtn = document.getElementById("close-overlay");
+
+    // Aggiungo evento click a ogni figura
+    images.forEach((img) => {
+        img.addEventListener("click", () => {
+            const imgSrc = img.querySelector("img").src;
+            overlayImg.src = imgSrc; // Aggiorno l'immagine dell'overlay
+            overlay.classList.remove("d-none"); // Mostro l'overlay
+        });
+    });
+
+    // Listener per chiudere l'overlay
+    closeBtn.addEventListener("click", () => {
+        overlay.classList.add("d-none"); // Nascondo l'overlay
+    });
+}
+
+
+
 
