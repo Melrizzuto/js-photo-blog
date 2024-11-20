@@ -22,18 +22,22 @@
         </header>
         <main>
             <div class="container debug d-flex">
+                <!-- Le cards delle foto verranno aggiunte qui tramite JavaScript -->
             </div>
-
         </main>
+
+        <!-- Overlay per mostrare l'immagine ingrandita -->
         <div id="overlay" class="d-none">
-            <button>Chiudi</button>
-            <img src="./img/pin.svg" alt="sdsfsfggf">
+            <div id="overlay-content">
+                <button id="close-overlay">Chiudi</button>
+                <img id="img-overlay" src="" alt="">
+            </div>
         </div>
     </div>
 
-    <!-- axios -->
+    <!-- Axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
-    <!-- myscript -->
+    <!-- Il tuo script JavaScript -->
     <script src="./js/script.js"></script>
 </body>
 
